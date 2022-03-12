@@ -14,7 +14,7 @@ class EasyClient(TwilioClient):
     def sms(self, phone_number: str = None, text: str = None) -> object:
         """Sends a text message to a specified phone number."""
         if not phone_number or not text:
-            throw CannotSend()
+            raise CannotSend()
         return self.messages.create(
             messaging_service_sid='NEEDS_TO_BE_REPLACED',
             body=text,
