@@ -8,6 +8,7 @@ class EasyClient(TwilioClient):
         pass
 
     def __init__(self, phone_number: str = None, text_message: str = None):
+        super().__init__()
         self.phone_number = phone_number
         self.text_message = text_message
 
